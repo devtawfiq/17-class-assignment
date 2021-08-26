@@ -1,0 +1,446 @@
+@font-face {
+    font-family: 'nonto-a';
+    src: url('./font/Nunito-Regular.eot');
+    src: url('./font/Nunito-Regular.eot?#iefix') format('embedded-opentype'),
+         url('./font/Nunito-Regular.woff2') format('woff2'),
+         url('./font/Nunito-Regular.woff') format('woff'),
+         url('./font/Nunito-Regular.ttf')  format('truetype'),
+         url('./font/') format('svg');
+}
+@font-face {
+    font-family: 'monto-h';
+    src: url('font/');
+    src: url('font/?#iefix') format('embedded-opentype'),
+         url('font//Helvetica.woff2') format('woff2'),
+         url('font//Helvetica.woff') format('woff'),
+         url('font//Helvetica.ttf')  format('truetype'),
+         url('font//Helvetica.svg#Helvetica') format('svg');
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.text-center{
+    text-align: center;
+}
+.text-right{
+    text-align: right;
+}
+.text-left{
+    text-align: left;
+}
+.clearfix::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.container{
+  width: 1000px;
+  margin: auto;
+
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+
+/* ------------------- Main css ------------------ */
+.header{
+    background: #000;
+}
+
+.logo{}
+.logo img {
+    width: 78px;
+    padding: 8px 0;
+}
+
+.menu{}
+.menu ul{}
+.menu ul li{
+    display: inline-block;
+    padding: 0 20px;
+}
+.menu ul li a {
+    display: block;
+    
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    line-height: 64px;
+    position: relative;
+}
+.menu ul li a::before {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    top: 47px;
+    left: 0;
+    visibility: hidden;
+    transition: .2s;
+}
+.menu ul li a:hover::before{
+    visibility: visible;
+
+}
+
+/* -------------- Drowpdown menu ----------- */
+.menu ul li{
+    position: relative;
+}
+.menu ul li:hover ul{
+    visibility: visible;
+    opacity: 1;
+    border-top: 4px solid #fff;
+}
+.menu ul li ul{
+    width: 175px;
+    position: absolute;
+    top: 106%;
+    left: 0;
+    background: #000;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+}
+.menu ul li ul li {
+    display: block;
+    border-bottom: 1px solid #fff;
+    text-align: left;
+    height: 53px;
+}
+.menu ul li ul li a::before {
+    width: 45%;
+    background: #000;
+}
+.menu ul li ul li:hover{
+    background: #fff;
+
+    transition: .3s;
+}
+.menu ul li ul li:hover a{
+    color: #000;
+}
+/* ------------ Banner section ----------- */
+.banner-section{
+    background: url(./img/./a0c6042d4612d7adf44692fffac7e082.jpg) no-repeat top center;
+    background-size: cover;
+    padding: 170px 0;
+}
+.banner-content h2 {
+    font-size: 39px;
+    font-weight: 900;
+    font-family: 'monto-h';
+    margin-bottom: 16px;
+    color: #223127;
+}
+.banner-content p {
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'monto-h';
+    margin-bottom: 19px;
+}
+a.btn {
+    font-size: 18px;
+    font-weight: 500;
+    background: #000;
+    display: inline-block;
+    border-radius: 10px;
+    color: #fff;
+    font-family: 'monto-h';
+    margin-right: 9px;
+    width: 140px;
+    margin-right: 10px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border: 1px solid #fff;
+    transition: .4s;
+}
+a.btn:hover{
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+a.btn2 {
+    font-size: 18px;
+    font-weight: 500;
+    background: #fff;
+    display: inline-block;
+    border-radius: 10px;
+    color: #000;
+    font-family: 'monto-h';
+    margin-right: 9px;
+    width: 140px;
+    margin-left: 10px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    transition: .4s;
+}
+a.btn2:hover{
+    background: #000;
+    color: #fff;
+}
+/* ------- About section ------------- */
+
+.about-section{
+    padding: 60px 0;
+    background: #87a471;
+}
+.title h2 {
+    margin-bottom: 35px;
+    font-size: 36px;
+    font-family: 'monto-h';
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: #fff;
+    text-shadow: 3px 1px 5px #fff;
+    position: relative;
+    display: inline-block;
+}
+.title h2::before {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    top: 51px;
+    left: 0;
+    text-align: center;
+    display: inline-block;
+}
+.about-content{
+    width: 45%;
+}
+
+.about-img{
+    width: 40%;
+}
+.about-img img {
+    width: 290px;
+}
+.about-content p {
+    font-size: 14px;
+    line-height: 27px;
+    color: #fff;
+    margin-top: 42px;
+}
+/* --------------- Service section -------------- */
+.service-section{
+    padding: 60px 0;
+    background: #606a64;
+}
+.service-title{}
+.service-title-content{}
+
+.service-title-content h2 {
+    font-size: 39px;
+    margin-bottom: 19px;
+    color: #ebe8e8;
+    font-weight: 600;
+    font-family: 'monto-h';
+}
+.service-title-content p {
+    width: 700px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 28px;
+    color: #f7ecec;
+}
+
+/* --------- Service Box ---------- */
+.service-box {
+    width: 32%;
+    background: #fff;
+    margin-right: 50px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    margin-top: 50px;
+}
+.service-box:nth-child(3) {
+    margin-right: -60px;
+}
+.service-box span {
+    float: left;
+    height: 163px;
+    width: 41px;
+    margin-right: 14px;
+    margin-top: 10px;
+}
+.service-box h3 {
+    font-size: 24px;
+    font-family: 'monto-h';
+    color: #555;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.service-box p {
+    font-size: 16px;
+    color: #777;
+    line-height: 23px;
+}
+/* ------------ product-section ----------- */
+.product-section{
+    padding: 80px 0;
+    background: #87a471;
+}
+.product-title{}
+.product-title h2{
+    margin-bottom: 35px;
+    font-size: 36px;
+    font-family: 'monto-h';
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: #fff;
+
+}
+.product-title p {
+    font-size: 21px;
+    margin-top: -14px;
+    margin-bottom: 44px;
+    color: #fff;
+    font-family: 'monto-h';
+}.item-left{
+    width: 48%;
+    border: 1px solid #ddd;
+}
+.item-left img{
+    width: 100%;
+}
+.item-left p {
+    margin-top: 19px;
+    text-align: center;
+    color: #274659;
+    font-weight: 600;
+}
+.item-left p span {
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 42px;
+    display: inline-block;
+}
+.product-item {
+    width: 24%;
+    margin-right: 20px;
+    margin-top: 50px;
+}
+.product-item img {
+    width: 220px;
+}
+.product-item.left.imgbb {
+    margin-right: -33px;
+}
+.product-item-full{
+    
+}
+/* --------------- team-section --------- */
+.team-section{
+    padding: 80px 0 60px 0;
+    background: #5b9776;
+}
+.team-title h2 {
+    font-size: 36px;
+    font-family: 'monto-h';
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: #fff;
+
+    position: relative;
+    display: inline-block;
+    margin-bottom: 90px;
+}
+.team-title h2::before {
+    content: "";
+    width: 84%;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    top: 66px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+.team-box{
+    width: 32%;
+}
+.team-box img {
+    width: 94%;
+}
+.team-box .icon{
+    text-align: center;
+}
+.team-box .icon a {
+    color: #fff;
+    margin-right: 9px;
+    font-size: 23px;
+    margin-top: 10px;
+    display: inline-block;
+    transition: .4s;
+}
+.team-box .icon a:hover{
+    color: #466381;
+
+}
+
+/* ------------ footer-top ------------ */
+.footer-top{
+    padding: 100px 0;
+    background: #606a64;
+}
+.footer-top-content h2 {
+    font-size: 30px;
+    font-family: 'monto-h';
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: #e4e6e8;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.footer-top-content p {
+    width: 580px;
+    margin: auto;
+    color: #e5e5e5;
+    font-size: 18px;
+    line-height: 30px;
+}
+.footer-top-content a {
+    font-size: 15px;
+    padding: 13px 31px;
+    background: #00bc9c;
+    display: inline-block;
+    margin-top: 17px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    transition: .4s;
+}
+.footer-top-content a:hover{
+    background: #466381;
+}
+.footer-section{
+    padding: 15px 0;
+    background: #000;
+    font-size: 18px;
+}
+.footer-section h6 {
+    color: #fff;
+    font-size: 17px;
+    font-weight: 300;
+    font-family: 'monto-h';
+}
+
